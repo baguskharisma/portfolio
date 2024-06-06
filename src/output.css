@@ -998,16 +998,12 @@ video {
   background-color: rgb(255 255 255 / 0.7);
 }
 
-.bg-\[url\(\'\/src\/img\/guide\.png\'\)\] {
-  background-image: url('/src/img/guide.png');
-}
-
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
 .bg-notebook {
-  background-image: url('/src/img/guide.png');
+  background-image: url('../src/img/guide.png');
 }
 
 .from-\[\#1a1a1a\] {
