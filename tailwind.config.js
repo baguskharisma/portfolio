@@ -23,6 +23,9 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
         nanum: ["Nanum Pen Script", "sans-serif"],
       },
+      backgroundImage: {
+        notebook: "url('/src/img/guide.png')",
+      },
     },
   },
   darkMode: "selector",
