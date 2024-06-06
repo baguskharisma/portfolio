@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  x-data="{ theme: localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') }"
-  x-init="$watch('theme', value => { localStorage.setItem('theme', value); document.documentElement.classList.toggle('dark', value === 'dark') }); document.documentElement.classList.toggle('dark', theme === 'dark')"
->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="="Bagus Kharisma's Portfolio">
-    <title>Home</title>
+<html lang="en"
+x-data="{ theme: localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') }"
+x-init="$watch('theme', value => { localStorage.setItem('theme', value); document.documentElement.classList.toggle('dark', value === 'dark') }); document.documentElement.classList.toggle('dark', theme === 'dark')">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="="About Bagus Kharisma">
+    <title>About me</title>
     <link href="src/output.css" rel="stylesheet" />
     <script
       defer
@@ -25,8 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Nanum+Pen+Script&display=swap"
       rel="stylesheet"
     />
-  </head>
-  <body
+</head>
+<body
     :class="{ 'dark': theme === 'dark' }"
     class="bg-[#fbfbfb] dark:bg-[#0D0D0D]"
   >
@@ -53,10 +51,10 @@
           <ul
             class="flex space-x-10 text-base font-medium text-onyx font-inter dark:text-light-gray hover:text-white"
           >
-            <li class="text-white">
+            <li>
               <a href="#">About</a>
             </li>
-            <li>
+            <li class=" text-white">
               <a href="#">Tech Stack</a>
             </li>
             <li>
@@ -200,283 +198,90 @@
         alt=""
       />
       <div
-        class="w-11/12 md:w-3/4 mx-auto -mt-[225px] md:-mt-[350px] md:relative"
+      class="w-11/12 md:w-3/4 mx-auto -mt-[350px] md:relative"
+    >
+      <h1 class="text-5xl font-bold md:text-6xl font-inter text-onyx dark:text-white">A little bit about me
+      </h1>
+      <p
+        class="w-3/4 mt-4 text-sm font-medium md:mt-10 md:text-base font-inter text-dark-gray/50"
       >
-        <h1 class="text-5xl font-extrabold md:text-6xl font-inter">
-          <span class="text-dark-gray"
-            ><span class="md:hidden">Hi 👋</span><br />
-            I'm</span
-          >
-          <span class="text-onyx dark:text-white">Bagus Kharisma</span>
-        </h1>
-        <p
-          class="w-3/4 mt-4 text-sm font-medium md:mt-10 md:text-base font-inter text-dark-gray"
-        >
-          I am a front-end engineer and UI/UX designer helping startups turn
-          their visions into a digital reality. I specialize in designing and
-          building modern mobile and web-based apps.
-        </p>
-        <div class="items-center mt-10 md:flex md:space-x-4">
-          <a href="#"
-            ><button
-              class="w-full px-8 py-4 text-lg font-medium text-white shadow-lg rounded-lg bg-gradient-to-b from-[#1a1a1a] to-[#131313] font-inter"
-            >
-              See my resume
-            </button></a
-          >
-          <a href="#"
-            ><button
-              class="w-full px-8 py-4 mt-4 text-lg font-medium rounded-lg md:mt-0 text-onyx dark:text-dark-gray bg-[#f3f3f3] dark:bg-onyx font-inter"
-            >
-              Get in touch
-            </button></a
-          >
-        </div>
-        <img
-          class="absolute hidden -top-16 -right-32 dark:md:block -z-10"
-          src="src/img/icon.png"
-          alt=""
-        />
-        <img
-          class="absolute hidden dark:hidden -top-16 -right-32 md:block -z-10"
-          src="src/img/icon-light.png"
-          alt=""
-        />
-      </div>
+        Who I am and what I do.
+      </p>
+    </div>
     </section>
-    <section class="w-11/12 mx-auto mt-40 md:w-3/4">
-      <h2
-        class="mb-4 text-3xl font-bold text-onyx dark:text-white md:mb-8 font-inter"
-      >
-        Selected Work
-      </h2>
-      <div
-        class="rounded-[32px] bg-[#f6f6f6] dark:bg-[#151515]/50 border border-[#ebebeb] dark:border-[#383737] mb-9 md:mb-8 md:flex md:justify-center"
-      >
-        <div class="px-6 py-8 md:p-[60px]">
-          <img src="src/img/subbi.png" alt="" />
-          <p
-            class="mt-4 text-xl font-extrabold text-onyx dark:text-white font-inter"
-          >
-            Subbi –– The free subscriptions manager
-          </p>
-          <p
-            class="mt-4 text-sm font-inter text-dark-gray h-[173px] md:h-fit text-ellipsis overflow-hidden"
-          >
-            Subbi is a side project that I’ve built to help me keep track of how
-            much I spend on subscriptions and also to prevent the “accidental”
-            bill after a 14-day trail ends. It helps you keep track of bills
-            like Netflix, Spotify, Xbox Game Pass, Bus Card, Bank Cards, and
-            many more.
-          </p>
-          <a href="#" class="flex items-center mt-4 space-x-2 md:mt-10">
-            <p class="text-lg font-medium text-onyx dark:text-white font-inter">
-              Download App
-            </p>
-            <svg
-              width="22"
-              height="14"
-              xmlns="http://www.w3.org/2000/svg"
-              class="stroke-onyx dark:stroke-white"
-            >
-              <path
-                d="M13.17 1a30.231 30.231 0 0 1 5.62 5.406c.14.174.21.384.21.594m-5.83 6a30.232 30.232 0 0 0 5.62-5.406A.949.949 0 0 0 19 7m0 0H1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="justify-end hidden w-full lg:flex">
-          <img src="src/img/mobile-app.png" alt="" />
-        </div>
-      </div>
-      <div
-        class="rounded-[32px] bg-[#f6f6f6] dark:bg-[#151515]/50 border border-[#ebebeb] dark:border-[#383737] mb-9 md:mb-8 md:flex md:justify-center"
-      >
-        <div class="px-6 py-8 md:p-[60px]">
-          <img src="src/img/react.png" alt="" />
-          <p
-            class="mt-4 text-xl font-extrabold text-onyx dark:text-white font-inter"
-          >
-            React Documentation
-          </p>
-          <p
-            class="mt-4 text-sm font-inter text-dark-gray h-[173px] md:h-fit text-ellipsis overflow-hidden"
-          >
-            With the release of the new React website on March 16, there was a
-            need for localization to make the documentation accessible to
-            Arabic-speaking developers. I contributed to translating several
-            documentation, worked with great developers, Improved my ability to
-            write better PR requests, and as a side effect, I now know more
-            about the Arabic grammar.
-          </p>
-          <a href="#" class="flex items-center mt-4 space-x-2 md:mt-10">
-            <p class="text-lg font-medium text-onyx dark:text-white font-inter">
-              Visit Site
-            </p>
-            <svg
-              width="22"
-              height="14"
-              xmlns="http://www.w3.org/2000/svg"
-              class="stroke-onyx dark:stroke-white"
-            >
-              <path
-                d="M13.17 1a30.231 30.231 0 0 1 5.62 5.406c.14.174.21.384.21.594m-5.83 6a30.232 30.232 0 0 0 5.62-5.406A.949.949 0 0 0 19 7m0 0H1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="items-center justify-end hidden w-full lg:flex">
-          <img src="src/img/tab.png" alt="" />
-        </div>
-      </div>
-      <div
-        class="rounded-[32px] bg-[#f6f6f6] dark:bg-[#151515]/50 border border-[#ebebeb] dark:border-[#383737] mb-9 md:mb-8 md:flex md:justify-center"
-      >
-        <div class="px-6 py-8 md:p-[60px]">
-          <img src="src/img/story-book.png" alt="" />
-          <p
-            class="mt-4 text-xl font-extrabold text-onyx dark:text-white font-inter"
-          >
-            Storybook Documentation
-          </p>
-          <p
-            class="mt-4 text-sm font-inter text-dark-gray h-[173px] md:h-fit text-ellipsis overflow-hidden"
-          >
-            This was my very first OSS contribution, I contributed to
-            translating the documentation of Storybook into Arabic, enabling a
-            wider audience to access and understand the resources available. I
-            gained valuable experience in working effectively with teams and
-            navigating the pull request process.
-          </p>
-          <a href="#" class="flex items-center mt-4 space-x-2 md:mt-10">
-            <p class="text-lg font-medium text-onyx dark:text-white font-inter">
-              Visit Site
-            </p>
-            <svg
-              width="22"
-              height="14"
-              xmlns="http://www.w3.org/2000/svg"
-              class="stroke-onyx dark:stroke-white"
-            >
-              <path
-                d="M13.17 1a30.231 30.231 0 0 1 5.62 5.406c.14.174.21.384.21.594m-5.83 6a30.232 30.232 0 0 0 5.62-5.406A.949.949 0 0 0 19 7m0 0H1"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-        </div>
-        <div class="items-center justify-end hidden w-full lg:flex">
-          <img src="src/img/code.png" alt="" />
-        </div>
-      </div>
-    </section>
-    <section class="w-11/12 mx-auto mt-40 md:w-3/4">
-      <h2
-        class="mb-4 text-3xl font-bold text-onyx dark:text-white lg:mb-8 font-inter"
-      >
-        Get to know me
-      </h2>
-      <div class="grid gap-4 gris-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div
-          class="rounded-[32px] h-[356px] bg-[#f6f6f6] dark:bg-[#151515] border border-[#ebebeb] dark:border-[#383737] pt-8"
-        >
-          <p
-            class="text-2xl font-extrabold text-center text-onyx dark:text-white font-inter"
-          >
-            About me
-          </p>
-          <p class="text-sm text-center font-inter text-dark-gray">
-            Who I am and what I do
-          </p>
-          <img class="mx-auto mt-10" src="src/img/avatar.png" alt="" />
-        </div>
-        <div
-          class="rounded-[32px] h-[356px] bg-[#f6f6f6] dark:bg-[#151515] border border-[#ebebeb] dark:border-[#383737] pt-8"
-        >
-          <p
-            class="text-2xl font-extrabold text-center text-onyx dark:text-white font-inter"
-          >
-            Tech Stack
-          </p>
-          <p class="text-sm text-center font-inter text-dark-gray">
-            The dev tools, apps, and devices I use
-          </p>
-          <div class="w-full h-[260px] mt-[10px]">
-            <img
-              class="object-cover w-full h-full rounded-b-[32px]"
-              src="src/img/tech-stack.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div
-          class="rounded-[32px] h-[356px] bg-[#f6f6f6] dark:bg-[#151515] border border-[#ebebeb] dark:border-[#383737] pt-8"
-        >
-          <p
-            class="text-2xl font-extrabold text-center text-onyx dark:text-white font-inter"
-          >
-            Notebook
-          </p>
-          <p class="text-sm text-center font-inter text-dark-gray">
-            My thoughts, insights, and reflections
-          </p>
-          <div class="h-[260px] mt-[10px]">
-            <img
-              class="object-center h-full mx-auto"
-              src="src/img/notebook.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="items-center mt-20 md:flex md:justify-between">
-        <div>
-          <h2
-            class="text-3xl font-bold text-center text-onyx dark:text-white md:text-start font-inter"
-          >
-            Let's work together
-          </h2>
-          <p
-            class="mt-3 text-sm text-center md:text-start font-inter text-dark-gray dark:text-medium-gray md:w-[380px]"
-          >
-            Want to discuss an opportunity to create something great? I’m ready
-            when you are.
-          </p>
+    <hr class="border-black/10 dark:border-white/10 mt-[60px]" />
+    <section class="grid grid-cols-1 md:grid-cols-5 w-11/12 md:w-3/4 mx-auto mt-[60px] gap-[65px] md:gap-[75px]">
+      <div class="md:order-last col-span-2">
+        <div class="border border-[#323232] rounded-lg px-8 py-10 flex items-center justify-center w-fit h-fit md:w-full md:h-[443px] md:mx-auto bg-black dark:bg-transparent">
+          <img src="src/img/icon-about-dark.png" alt="">
         </div>
         <a href="#"
-          ><button
-            class="w-full px-8 py-4 bg-gradient-to-b from-[#1a1a1a] to-[#131313] shadow-lg rounded-lg mt-9 md:mt-0 flex items-center justify-center space-x-2"
-          >
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4.934 12 3.09 5.732c-.481-1.635 1.05-3.147 2.665-2.628a53.872 53.872 0 0 1 12.64 5.963C19.525 9.793 21 10.442 21 12c0 1.558-1.474 2.207-2.605 2.933a53.87 53.87 0 0 1-12.64 5.963c-1.614.519-3.146-.993-2.665-2.628L4.934 12Zm0 0h4.9"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p class="h-6 text-lg font-medium text-white font-inter">
-              Get in touch
-            </p>
-          </button></a
+        ><button
+          class="w-fit px-8 py-4 bg-gradient-to-b from-[#1a1a1a] to-[#131313] shadow-lg rounded-lg mt-[100px] md:flex items-center justify-center space-x-2 hidden mx-auto"
         >
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.934 12 3.09 5.732c-.481-1.635 1.05-3.147 2.665-2.628a53.872 53.872 0 0 1 12.64 5.963C19.525 9.793 21 10.442 21 12c0 1.558-1.474 2.207-2.605 2.933a53.87 53.87 0 0 1-12.64 5.963c-1.614.519-3.146-.993-2.665-2.628L4.934 12Zm0 0h4.9"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="h-6 text-lg font-medium text-white font-inter">
+            Get in touch
+          </p>
+        </button></a
+      >
+      </div>
+      <div class="col-span-3">
+        <p class="font-inter font-semibold text-base text-onyx dark:text-dark-gray/50">WHO I AM</p>
+        <p class="mt-2 font-inter text-sm">
+          <span class="text-dark-gray">I’m</span><span class="text-onyx dark:text-white"> Bagus</span><span class="text-dark-gray">, a multi-disciplinary front-end engineer and UI/UX designer based in Pekanbaru, Indonesia 🇮🇩.</span> 
+        </p>
+        <p class="mt-8 font-inter font-semibold text-base text-onyx dark:text-dark-gray/50">WHAT I DO</p>
+        <p class="mt-2 font-inter text-sm text-dark-gray">With two years of invaluable experience in my role at Harmony Technology –– a tech company based here in Rabat, I have honed my skills in React.js, Next.js, TailwindCSS, and TypeScript, allowing me to craft seamless and interactive user experiences. During my time at Harmony Technology, I had the privilege of collaborating on projects for esteemed clients such as the Ministry of Health, Ministry of Education, and Ministry of Justice. It was an incredibly rewarding experience to develop applications that directly impact the lives of Moroccan citizens.</p>
+        <p class="mt-8 font-inter font-semibold text-base text-onyx dark:text-dark-gray/50">WHAT I DID</p>
+        <p class="mt-2 font-inter text-sm text-dark-gray">Before delving into the realm of front end engineering, I spent five years as a graphic designer. This background has equipped me with a keen eye for aesthetics and a deep understanding of user-centered design principles. It enables me to seamlessly blend functionality and visual appeal in every project I undertake.</p>
+        <p class="mt-[60px] font-inter text-sm">
+          <span class="text-dark-gray">Feel free to reach out via </span><a href="#" class="text-onyx dark:text-white underline">email</a><span class="text-dark-gray">, or follow me on </span><a href="#" class="text-onyx dark:text-white underline">Instagram</a><span class="text-dark-gray">. Want to see where I’ve worked? Check out my </span><a href="#" class="text-onyx dark:text-white underline">Resume</a><span class="text-dark-gray">, or Connect with me on </span><a href="#" class="text-onyx dark:text-white underline">LinkedIn</a><span class="text-dark-gray">.</span></p>
+        <p class="mt-[60px] font-inter text-sm text-dark-gray">
+          Let’s build something great,
+        </p>
+        <svg class="mt-4 dark:fill-white fill-onyx" width="150" height="45" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.78 26.16c-.038.005-.075.01-.13.037-.501.123-1.281.32-2.344.555a32.344 32.344 0 0 1-3.343.553c-1.19.137-2.248.122-3.169-.025-.921-.148-1.509-.53-1.784-1.164-.28-.958.248-2.194 1.6-3.73s3.173-3.152 5.506-4.816a61.983 61.983 0 0 1 7.506-4.638c2.675-1.402 5.2-2.48 7.544-3.188 2.36-.73 4.237-.9 5.632-.508 1.411.37 2.003 1.517 1.791 3.401-.132.745-.836.646-.737-.056.15-1.493-.439-2.316-1.766-2.486-1.308-.173-3.074.115-5.276.882-2.201.766-4.54 1.8-7.034 3.121a65.67 65.67 0 0 0-6.999 4.265c-2.18 1.51-3.913 2.924-5.195 4.26-1.283 1.334-1.817 2.38-1.58 3.153.746 2.026 9.68-.502 13.477-1.688a17.61 17.61 0 0 0 1.627-.615c.436-.191.92-.446 1.459-.727.124-.073.252-.128.376-.202.734-.402 1.508-.79 2.284-1.16 1.155-.553 2.77-1.11 4.063-1.202 1.624.38.06 1.619-.818 1.944a229.81 229.81 0 0 1-5.027 1.75c-.681.222-1.267.433-1.74.629-.474.196-1.015.458-1.638.826-1.657.964-3.289 1.981-4.896 3.034-1.29.838-3.048 2.064-5.268 3.713a67.1 67.1 0 0 0-6.207 5.175c-1.929 1.822-3.099 3.43-3.55 4.809-.23 1.025.232 1.615 1.403 1.768 1.19.15 2.782 0 4.814-.458 2.033-.438 4.215-1.068 6.548-1.852a103.703 103.703 0 0 0 6.658-2.48c2.112-.87 3.834-1.63 5.147-2.3 1.334-.653 2.006-1.085 2-1.276-.126-.52 1.74-1.07 2.085-1.077.853.214.767.876.119 1.343-.496.314-1.014.612-1.573.876a.954.954 0 0 1-.233.126c-.612.31-1.75.842-3.438 1.58a132.801 132.801 0 0 1-5.873 2.471 107.39 107.39 0 0 1-6.854 2.448c-2.32.744-4.438 1.27-6.373 1.58-1.917.309-3.385.233-4.42-.186-1.033-.42-1.37-1.37-1.022-2.813.33-1.134 1.125-2.386 2.365-3.754a40.959 40.959 0 0 1 4.352-4.11 80.745 80.745 0 0 1 4.86-3.756c1.575-1.144 2.877-2.041 3.886-2.69.3-.192.62-.387.94-.582 1.116-.701 2.021-1.26.245-.76ZM37.809 22.355c1.424-.11-.507 1.98-1.003 1.126-.103-.197.2-.37.374-.508.092-.031.143-.076.14-.095-.017-.285.184-.503.489-.523Zm-3.03 9.486c-2.453.321.155-4.651.836-5.889a1.01 1.01 0 0 1 .107-.205c-.376-.525 1.025-1.837 1.434-1.355.207.26.088.524-.052.772a.411.411 0 0 0-.063.104c-.383.74-.812 1.56-1.266 2.481-.438.9-.762 1.65-.97 2.252-.143.516.023.762.502.756.498-.007 1.11-.164 1.857-.472a29.704 29.704 0 0 0 2.047-.919c.628-.33.986-.53 1.108-.623.366-.278.685.101.239.504-.752.558-1.772 1.113-3.043 1.662-1.252.546-2.17.858-2.737.932Z" /><path d="m40.123 28.27.016-.02c.068-.067.234-.26.48-.58l7.264-15.953c2.532-2.188 1.507 2.558 1.19 3.652-.569 1.797-1.386 3.607-2.467 5.451-1.084 1.826-2.138 3.438-3.18 4.856-1.04 1.418-1.797 2.379-2.244 2.915l-.893 1.82c-.534 1.046-.191.733.556-.149a112.4 112.4 0 0 1 2.877-3.362c1.055-1.171 2.037-2.161 2.97-2.953.948-.813 1.703-1.199 2.262-1.176.76.091 1.023.918.804 2.459-.294 2.43-.006 3.598.6 3.69.801.106 2.15-.587 4.047-2.06.347-.275.732.172.286.575-2.007 1.66-3.465 2.54-4.544 2.355-1.212-.166-1.616-1.778-1.194-4.838.114-1.029-.056-1.447-.531-1.27-.476.178-1.117.702-1.94 1.594a54.644 54.644 0 0 0-2.6 2.981 57.02 57.02 0 0 1-2.857 3.225c-.86.898-1.446 1.261-1.772 1.113-.701-.368-.154-1.607.174-2.32.047-.082.075-.162.105-.224l.342-.752c.084-.241.132-.458.128-.63a.59.59 0 0 1 .12-.398Zm4.502-6.903c-1.317 2.679-1.178 2.718.413.08a26.845 26.845 0 0 0 2.675-5.192c1.962-5.5-1.279 1.22-2.576 4.05-.254.55-.438.899-.512 1.062Z" /><path d="M64.095 25.113c.632-.446.859-.036.312.476-.434.344-1.02.707-1.737 1.088-.701.36-1.37.524-1.967.507-.6-.037-.983-.465-1.113-1.309l-.012-.094c-.028-.36-.045-.339-.373-.066-1.777 1.515-3.107 2.493-3.99 2.933-.863.439-1.39.508-1.598.248-.26-.368-.077-1.023.51-1.961.586-.938 1.385-1.865 2.397-2.782 1.011-.918 2.027-1.51 3.026-1.794.996-.302 1.767.018 2.308.923.108.234-.05.485-.286.592-.236.108-.642-.069-.807-.296-.007-.056.026-.099.037-.158s.044-.101.018-.155c-.378-.391-.913-.378-1.647.024s-1.483.979-2.248 1.73c-.764.75-1.42 1.448-1.929 2.108-.51.641-.748 1.017-.693 1.143.074.125.537-.146 1.408-.816.871-.669 2.287-1.868 4.242-3.636.209-.161.478-.158.658.048a.437.437 0 0 1 .079.449c-.336 1.096-.31 1.725.08 1.922.41.195.94.145 1.61-.153a9.124 9.124 0 0 0 1.715-.971Z" /><path d="M67.1 22.576c.016-.02.05-.064.084-.087 1.173-1.149 3.59-3.494 5.289-2.243.752.61.847 1.478.302 2.582-.546 1.105-1.49 2.243-2.851 3.416a20.996 20.996 0 0 1-4.522 2.965c-1.656.83-3.227 1.284-4.695 1.361-.694-.024-.793-.49-.072-.545 1.317-.058 2.686-.448 4.104-1.188a21.026 21.026 0 0 0 3.931-2.64c1.19-1.016 2.117-1.998 2.76-2.944.643-.945.834-1.678.579-2.161-.329-.455-.867-.46-1.615-.019-.747.443-1.543 1.102-2.409 1.962a36.25 36.25 0 0 0-2.318 2.504l-1.375 1.653c-.03.061-.047.083-.05.064-.203.199-.494.18-.73-.02-.163-.207-.197-.47-.012-.667l.131-.17c.082-.107.294-.537.677-1.276.38-.757.975-2.06 1.801-3.948a723.904 723.904 0 0 0 3.445-8.086c2.063-4.882 3.452-7.743 4.209-8.55.412-.513.894-.5 1.234-.391.395.082.49.376.468.934-.023.845-.34 2.073-.935 3.681-.648 1.635-1.658 3.585-3.024 5.888-1.347 2.3-2.588 4.243-3.723 5.827-.221.507-.4.894-.519 1.158l-.216.545c-.014.04-.047.083-.058.142-.243.49-.284.611.11.253Zm3.715-9.824c-.29.707-.551 1.354-.786 1.901-.572 1.338-.844 2.044-.818 2.098.026.053.575-.88 1.611-2.776 1.225-2.207 2.132-4.068 2.757-5.585 2.772-7.366-2.206 3.064-2.764 4.362ZM84.393 13.576c-.69.588-1.153-.308-1.192-.896.02-1.017.703-2.235 2.056-3.618 1.372-1.385 3.091-2.758 5.178-4.103a39.595 39.595 0 0 1 6.419-3.424c2.2-.92 4.128-1.44 5.805-1.525 1.696-.089 2.802.436 3.354 1.57.552 1.133.212 3.072-.998 5.833a5671.364 5671.364 0 0 0-6.77 15.18c-.754 1.707-1.527 3.415-2.281 5.121-1.443 3.175-.758 2.262.108.962.128-.189.26-.36.388-.548.115-.15.227-.317.339-.485a347.869 347.869 0 0 1 8.824-12.12c.442-.574.467-1.113.419-1.624-.053-.548.001-1.014.679-1.256.57-.19.713.021.735.19.084.2.105.217.735-.536a68.17 68.17 0 0 1 8.821-9.23c.502-.41.812.047.399.407-3.242 2.778-6.102 6.272-8.726 9.658l-.328.426c-.131.17-.246.319-.346.428-.406.417-.562.686-.602 1.552-.057 1.462.055 2.748.333 3.841s.851 1.802 1.701 2.131c.868.327 2.119.067 3.773-.78.611-.31.917.262.381.561-4.764 2.442-7.095.623-7.242-4.428.012-.06.007-.097.002-.135.013-.48-.037-.569-.441 0-3.426 4.295-5.894 7.853-7.645 10.436-2.196 3.291-3.368 4.88-3.978 4.328-.306-.285-.475-.55-.508-.794-.032-.245.07-.64.305-1.188 1.33-3.007 2.764-6.256 4.303-9.73 2.027-4.57 3.921-8.837 5.685-12.78 2.044-4.593 1.781-7.314-3.928-5.648-1.496.445-3.386 1.247-5.665 2.445a46.65 46.65 0 0 0-6.361 4.01c-1.973 1.482-3.227 2.89-3.764 4.204-.095.3.06.452.23.583.294.19.456.4-.197.982ZM117.801 18.1l.016-.021c.068-.066.235-.26.481-.58l7.263-15.953c2.533-2.188 1.507 2.558 1.191 3.652-.569 1.797-1.386 3.607-2.468 5.452-1.083 1.825-2.137 3.437-3.179 4.855-1.041 1.419-1.797 2.379-2.245 2.916l-.892 1.82c-.534 1.046-.192.733.556-.15a112.105 112.105 0 0 1 2.877-3.361c1.054-1.172 2.037-2.162 2.969-2.953.948-.813 1.703-1.2 2.263-1.177.76.092 1.023.919.803 2.46-.294 2.43-.006 3.597.601 3.69.801.106 2.149-.587 4.046-2.06.348-.276.733.172.287.574-2.007 1.66-3.465 2.54-4.544 2.356-1.212-.167-1.616-1.779-1.194-4.838.114-1.03-.056-1.447-.532-1.27-.475.177-1.116.701-1.939 1.593a54.899 54.899 0 0 0-2.601 2.982 57.115 57.115 0 0 1-2.856 3.225c-.861.897-1.446 1.26-1.773 1.112-.701-.367-.154-1.606.175-2.32.046-.082.074-.162.104-.223l.343-.753c.083-.24.131-.457.128-.63a.587.587 0 0 1 .12-.398Zm4.502-6.904c-1.316 2.68-1.177 2.718.414.08a26.883 26.883 0 0 0 2.674-5.192c1.962-5.5-1.278 1.22-2.575 4.05-.254.55-.438.9-.513 1.062Z" /><path d="M141.774 14.942c.632-.446.858-.036.312.476-.435.344-1.02.708-1.737 1.089-.701.36-1.371.524-1.968.506-.599-.036-.982-.465-1.112-1.309l-.013-.094c-.028-.36-.044-.338-.373-.066-1.777 1.515-3.106 2.493-3.989 2.934-.863.438-1.391.507-1.598.247-.26-.367-.077-1.023.509-1.96.587-.939 1.386-1.866 2.397-2.783 1.012-.917 2.027-1.51 3.026-1.793.996-.303 1.768.017 2.309.922.108.235-.051.485-.287.593-.235.107-.642-.07-.806-.297-.008-.056.025-.099.037-.158.011-.058.044-.101.018-.155-.378-.39-.914-.378-1.647.024-.734.403-1.483.98-2.248 1.73-.765.75-1.421 1.449-1.929 2.109-.511.64-.749 1.016-.694 1.143.074.124.537-.147 1.409-.816.871-.67 2.287-1.869 4.241-3.636.209-.162.478-.159.659.047a.436.436 0 0 1 .078.45c-.335 1.096-.31 1.724.081 1.922.409.195.94.145 1.61-.154a9.116 9.116 0 0 0 1.715-.97Z" /><path d="M140.748 17.794c.164-.653.463-1.439.856-2.39.393-.95.775-1.842 1.14-2.713.207-.467.386-.854.533-1.199-.178-.187-.211-.431-.082-.62.274-.4.494-.62.64-.677l.035-.024a.42.42 0 0 1 .302-.04.532.532 0 0 1 .406.311l.012.094a.766.766 0 0 1-.05.351c-.372.814-.768 1.746-1.226 2.782a148.43 148.43 0 0 0-1.167 2.794c.264-.322.7-.8 1.289-1.432a44.075 44.075 0 0 1 1.817-1.788c.617-.56 1.073-.887 1.354-.943.455-.04.741.095.845.445.101.33.151.707.151 1.147.013.974.082 1.788 1.647.416.468-.387.58.173.27.443-1.038.863-1.775 1.094-2.19.708-.418-.405-.614-1.164-.586-2.258-.52.125-1.545 1.236-2.625 2.506-.949 1.1-1.872 2.101-2.504 2.547-.48.293-.948.086-.867-.46Z" />
+        </svg>
+        <a href="#"
+        ><button
+          class="w-full px-8 py-4 bg-gradient-to-b from-[#1a1a1a] to-[#131313] shadow-lg rounded-lg mt-[111px] flex items-center justify-center space-x-2 md:hidden"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.934 12 3.09 5.732c-.481-1.635 1.05-3.147 2.665-2.628a53.872 53.872 0 0 1 12.64 5.963C19.525 9.793 21 10.442 21 12c0 1.558-1.474 2.207-2.605 2.933a53.87 53.87 0 0 1-12.64 5.963c-1.614.519-3.146-.993-2.665-2.628L4.934 12Zm0 0h4.9"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="h-6 text-lg font-medium text-white font-inter">
+            Get in touch
+          </p>
+        </button></a
+      >
       </div>
     </section>
-    <footer class="mt-40">
+    <footer class="mt-[60px]">
       <hr class="border-black/10 dark:border-white/10" />
       <div class="w-11/12 px-4 py-6 mx-auto md:w-3/4 md:px-0 md:py-8">
         <div class="mt-16 md:flex md:justify-between md:flex-row-reverse">
@@ -588,7 +393,7 @@
       <div class="grid h-full grid-cols-5 mx-auto">
         <button
           type="button"
-          class="inline-flex flex-col items-center justify-center px-5 rounded-xl bg-[#151515]/50 dark:bg-white/10 group"
+          class="inline-flex flex-col items-center justify-center px-5 rounded-xl group"
         >
           <svg
           class="w-6 h-6"
@@ -609,7 +414,7 @@
         </button>
         <button
           type="button"
-          class="inline-flex flex-col items-center justify-center px-5 rounded-xl group"
+          class="inline-flex flex-col items-center justify-center px-5 rounded-xl group bg-[#151515]/50 dark:bg-white/10"
         >
           <svg
           class="w-6 h-6"
