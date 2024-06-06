@@ -24,7 +24,7 @@ module.exports = {
         nanum: ["Nanum Pen Script", "sans-serif"],
       },
       backgroundImage: {
-        notebook: "url('../src/img/guide.png')",
+        notebook: "url('src/img/guide.png')",
       },
     },
   },

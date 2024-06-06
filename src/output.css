@@ -1003,7 +1003,7 @@ video {
 }
 
 .bg-notebook {
-  background-image: url('../src/img/guide.png');
+  background-image: url('src/img/guide.png');
 }
 
 .from-\[\#1a1a1a\] {
